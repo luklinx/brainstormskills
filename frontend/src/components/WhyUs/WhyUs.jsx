@@ -38,9 +38,6 @@ const WhyUs = () => {
     setIsVisible(true);
   }, []);
 
-  const handleLearnMore = (itemId) => {
-    console.log(`Learn more about: ${itemId}`);
-  };
 
   const handleStartJourney = () => {
     console.log('Navigate to enrollment');

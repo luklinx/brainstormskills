@@ -1,7 +1,7 @@
 // src/pages/Blog/Blog.jsx
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { blogPosts, categories, getFeaturedPosts, getPostsByCategory, searchPosts } from '../../data/blogData';
+import { blogPosts, categories, getFeaturedPosts } from '../../data/blogData';
 import styles from './Blog.module.css';
 
 const Blog = () => {
@@ -36,7 +36,7 @@ const Blog = () => {
 
   useEffect(() => {
     const categoryParam = searchParams.get('category');
-    if (categoryParam && categoryParam !== activeCategory) {
+    if (categoryParam) {
       setActiveCategory(categoryParam);
     }
   }, [searchParams]);

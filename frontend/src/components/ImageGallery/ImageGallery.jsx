@@ -26,20 +26,7 @@ const ImageGallery = () => {
   const categories = useMemo(() => allCategories, [allCategories]);
 
   // Function to add new categories dynamically
-  const addCategory = useCallback((name, label) => {
-    const newCategory = {
-      id: name.toLowerCase(),
-      label: label,
-      name: name.toLowerCase(),
-    };
-
-    setAllCategories((prev) => {
-      // Check if category already exists
-      const exists = prev.some((cat) => cat.name === newCategory.name);
-      if (exists) return prev;
-      return [...prev, newCategory];
-    });
-  }, []);
+  // (Removed unused `addCategory` helper to satisfy ESLint)
   const detectImageCounts = useCallback(async () => {
     const counts = {};
     const visible = [];
